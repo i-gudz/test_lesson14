@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.after{
+    color: firebrick;
+    font-size: 24px;
+}
+
+.after::after{
+    content: '>';
+    position: absolute;
+    transition: .3s;
+}
+
+.after:hover::after{
+    transform: translateX(10px);
+    transition: .3s;
+    cursor: pointer;
+}
+
+.beforeafter{
+    font-size: 38px;
+    color: gold;
+    position: relative;
+    transition: .3s;
+}
+
+.beforeafter::before{
+    content: '';
+    position: absolute;
+    right: -50px;
+    clip-path: polygon(50% 0, 50% 0, 100% 25%, 100% 74%, 50% 100%, 50% 100%, 0 75%, 0 25%);
+    border: 10px solid darkviolet;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transition: .3s;
+}
+
+.beforeafter::after{
+    content: '>';
+    position: absolute;
+    right: -47px;
+    top: 6px;
+    width: 30px;
+    height: 30px;
+    font-size: 30px;
+    color: black;
+    transition: .3s;
+}
+
+.beforeafter:hover::after{
+    font-weight: bold;
+    transition: .3s;
+}
+
+.beforeafter:hover::before{
+    transform: rotate(90deg);
+    transition: .3s;
+}
+
+.pseudo{
+    width:100%;
+    background-color: darkgray;
+}
+
+h2{
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+}
+
+a:visited{
+    color: darkslateblue;
+}
+
+a:link{
+    color: greenyellow;
+}
+
+a:active{
+    color: red;
+}
+
+.f:focus{
+    color: khaki;
+}
+
+ul li{
+    font-size: 30px;
+}
+
+ul li:first-child{
+    font-weight: bold;
+}
+
+ul li p:only-child{
+    text-transform: uppercase;
+}
+
+ul li:last-child{
+    color: saddlebrown;
+}
